@@ -1,1 +1,27 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+header {
+  background-image: url(/img/ADayToRemember-AC.png);
+  height: 85vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+header .navbar {
+  background-color: rgba(0, 0, 0, 0.144);
+  font-size: 1.3rem;
+}
+
+header .navbar.navbar-expand-lg {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+header .navbar.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+header .navbar .brand-logo {
+  height: 85px;
+}
+/*# sourceMappingURL=style.css.map */

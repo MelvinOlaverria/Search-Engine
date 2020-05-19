@@ -1,0 +1,26 @@
+header {
+    background-image:url(/img/ADayToRemember-AC.png);
+    height: 85vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.144);
+        font-size: 1.3rem;
+
+        &.navbar-expand-lg {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+
+        &.navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .brand-logo {
+            height: 85px;
+        }
+    }
+}
