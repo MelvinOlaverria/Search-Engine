@@ -1,27 +1,118 @@
-header {
-  background-image: url(/img/ADayToRemember-AC.png);
-  height: 85vh;
-  background-position: center;
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.main-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.386)), to(rgba(255, 255, 255, 0))), url(/img/Monstercat-AC.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.386), rgba(255, 255, 255, 0)), url(/img/Monstercat-AC.jpg);
+  height: 100vh;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   image-rendering: -webkit-optimize-contrast;
+  position: relative;
 }
 
-header .navbar {
-  background-color: rgba(0, 0, 0, 0.144);
-  font-size: 1.3rem;
+.main-header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.133);
 }
 
-header .navbar.navbar-expand-lg {
-  padding-bottom: 0;
-  padding-top: 0;
+.main-header nav .logo {
+  height: 100px;
+  margin-left: 40px;
 }
 
-header .navbar.navbar-light .navbar-nav .nav-link {
+.main-header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  margin-right: 40px;
+}
+
+.main-header nav ul li {
+  margin-right: 25px;
+}
+
+.main-header nav ul li a {
+  color: white;
+}
+
+.main-header nav ul li a:hover {
+  color: yellow;
+}
+
+.main-header .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-header .search-form input[type="text"] {
+  width: 300px;
+  border-radius: 4px;
+  outline: none;
+  background: #f2f2f2;
+  height: 46px;
+  font-weight: 100;
+  line-height: 20px;
+  cursor: text;
+  padding: 0 16px;
+  margin-right: 20px;
+}
+
+.main-header .search-form input[type="text"]:placeholder-shown {
+  padding-left: 10px;
+  font-style: italic;
+}
+
+.main-header .search-btn {
+  background-color: #f50;
+  border-color: #f50;
   color: #fff;
+  border-radius: 3px;
+  font-weight: 100;
 }
 
-header .navbar .brand-logo {
-  height: 85px;
+section {
+  text-align: center;
+  margin-top: 35px;
+}
+
+section .artist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px;
+}
+
+section .artist-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: start;
 }
 /*# sourceMappingURL=style.css.map */
