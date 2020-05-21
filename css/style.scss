@@ -6,20 +6,29 @@ a {
     }
 }
 
+//Header- Nav
+
 .main-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.386), rgba(255, 255, 255, 0)), url(/img/Monstercat-AC.jpg), ;
     height: 100vh;
+    width: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     image-rendering: -webkit-optimize-contrast;
-    position: relative;
+    position: sticky;
 
-    nav {
+    .nav {
+        width: 100%;
+        height: 7rem;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.133);
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(255,255,255,.05);
+        transition: height .5s ease;
+        position: sticky;
+        top: 0;
+
 
         .logo {
             height: 100px;
@@ -36,15 +45,56 @@ a {
                 margin-right: 25px;
 
                 a {
-                    color: white;
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 1.6rem;
 
                     &:hover {
                         color: yellow;
+
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform .5s ease;
+                        }
                     }
                 }
             }
         }
     }
+
+    .scrolling-active {
+        background-color: #fff;
+        box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+        z-index: 1;
+
+        &.nav {
+            height: 6rem;
+
+            .logo {
+                transform: scale(0.8);
+                transition: transform 0.5s;
+            }
+
+            & a {
+                color: #313131;
+
+                &::after {
+                    background-color: #313131;
+                }
+            }
+        }
+
+    }
+
+    //Form
 
     .search-form {
         display: flex;
@@ -80,6 +130,10 @@ a {
         font-weight: 100;
     }
 }
+
+
+//Search Results
+
 
 section {
     text-align: center;
