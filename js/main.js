@@ -1,3 +1,9 @@
+window.addEventListener('scroll', function () {
+    let nav = document.querySelector(".nav");
+    let windowPosition = window.scrollY > 0;
+    nav.classList.toggle('scrolling-active', windowPosition);
+})
+
 const url = "https://itunes.apple.com/search?term="
 const inputSearch = document.querySelector(".search-input")
 const btnSearch = document.querySelector(".search-btn")
