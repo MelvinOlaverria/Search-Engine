@@ -2,6 +2,13 @@
     font-family: 'Rajdhani', sans-serif;
 }
 
+@mixin column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 $primary-color:#deb992;
 $secondary-color:#1ba098;
 
@@ -185,3 +192,30 @@ header {
     margin-top: 2.5rem;
 }
 
+.search-container {
+    padding-bottom: 45px;
+}
+
+.footer {
+    @include column-center();
+    @include Rajdhani();
+    border-top: 2px solid $primary-color;
+
+    h2 {
+        margin: 30px 0 10px 0;
+    }
+
+    p {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        text-align: center;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
