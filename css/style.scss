@@ -1,152 +1,187 @@
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
+@mixin Rajdhani {
+    font-family: 'Rajdhani', sans-serif;
 }
 
-//Header- Nav
+$primary-color:#deb992;
+$secondary-color:#1ba098;
 
-.main-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.386), rgba(255, 255, 255, 0)), url(/img/Monstercat-AC.jpg), ;
-    height: 100vh;
-    width: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include Rajdhani();
+    font-weight:normal;
+}
+
+
+header {
+    background-image: url(/img/HeroImg2.png);
     background-size: cover;
-    image-rendering: -webkit-optimize-contrast;
-    position: sticky;
+    background-position: center;
+    height: 100vh;
+    background-repeat: repeat-y;
 
-    .nav {
-        width: 100%;
-        height: 7rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 2px solid rgba(255,255,255,.05);
-        transition: height .5s ease;
+    .navbar {
+        @include Rajdhani();
+        height: 5rem;
+        background-color: transparent;
+        border-bottom: 1px solid $primary-color;
         position: sticky;
         top: 0;
 
-
         .logo {
-            height: 100px;
-            margin-left: 40px;
-        }   
+            color: white;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            font-weight: 400;
+            transition: transform 0.5s;
 
-        ul {
-            list-style: none;
-            display: flex;
+            &:hover {
+                text-decoration: none;
+                transform: scale(0.98);
+            }
+        }
+
+        .nav-link {
+            color: white;
+            font-weight: 300;
             font-size: 1.5rem;
-            margin-right: 40px;;
+            margin-right: 20px;
+            transition: transform
+            0.5s;
 
-            li {
-                margin-right: 25px;
-
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                    font-size: 1.6rem;
-
-                    &:hover {
-                        color: yellow;
-
-                        &::after {
-                            content: '';
-                            width: 100%;
-                            height: 2px;
-                            background-color: #fff;
-                            position: absolute;
-                            left: 0;
-                            bottom: -3px;
-                            transform: scaleX(0);
-                            transform-origin: left;
-                            transition: transform .5s ease;
-                        }
-                    }
-                }
+            &:hover {
+                transform: scale(0.98);
             }
         }
     }
+
+    // Navbar Scrolling Styles
 
     .scrolling-active {
         background-color: #fff;
-        box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+        box-shadow: 3px 1rem rgba(0,0,0,.1);
         z-index: 1;
-
-        &.nav {
-            height: 6rem;
-
-            .logo {
-                transform: scale(0.8);
-                transition: transform 0.5s;
-            }
-
-            & a {
-                color: #313131;
-
-                &::after {
-                    background-color: #313131;
-                }
-            }
+        
+        .logo {
+            color: black;
         }
 
+        .nav-link {
+            color: black;
+        }
     }
 
-    //Form
-
-    .search-form {
-        display: flex;
+    .CTA {
+        @include Rajdhani();
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
 
-        input[type="text"] {
-            width: 300px;
-            border-radius: 4px;
-            outline: none;
-            background: #f2f2f2;
-            height: 46px;
+        .hero-text {
+            width: 100%;
+            text-transform: uppercase;;
             font-weight: 100;
-            line-height: 20px;
-            cursor: text;
-            padding: 0 16px;
-            margin-right: 20px;
+            letter-spacing: 2px;
+            color: #deb992;
+            margin-bottom: 20px;
+            font-size: 4rem;
+        }
 
-            &:placeholder-shown {
+        .copy {
+            @include Rajdhani();
+            color: $primary-color;
+            text-align: center;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+
+        .search-form {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+
+            .search-input {
+                width: 40%;
+                height: 40px;
+                border-radius: 30px;
                 padding-left: 10px;
-                font-style: italic;
+                background-color: transparent;
+                border: 1px solid $secondary-color;
+                outline: none;
+                caret-color: white;
+                color: white;
+                
+                &:focus::placeholder {
+                    color: transparent;
+                }
+
+                &::placeholder {
+                    color: white;
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                }
+    
+            }
+    
+            .button {
+                width: 85px;
+                margin: 0 auto;
+            }
+    
+            .search-button {
+                outline: none;
+                margin-top: 25px;
+                border-radius: 30px;
+                height: 35px;
+                width: 85px;
+                text-align: center;
+                background-color: transparent;
+                color: white;
+                font-weight: 300;
+                border: 1px solid $secondary-color;
+                transition: background-color 0.5s, color 0.5s;
+    
+                &:hover {
+                    background-color: white;
+                    color: $secondary-color;
+                    font-weight: 400;
+                }
             }
         }
     }
-
-    .search-btn {
-        background-color: #f50;
-        border-color: #f50;
-        color: #fff;
-        border-radius: 3px;
-        font-weight: 100;
-    }
 }
 
 
-//Search Results
+.artist {
+    display: flex;
+    justify-content: start;
+    margin: 20px;
+    padding-bottom: 20px;
+    height: 150px;
+    border-bottom: 1px solid $primary-color;
 
-
-section {
-    text-align: center;
-    margin-top: 35px;
-
-    .artist {
-        display: flex;
-        margin: 20px;
+    img {
+        align-self: center;
+        justify-self: start;
     }
 
     .artist-info {
-        display: flex;
-        flex-direction: column;
-        justify-items: start;
+        margin-left: 20px;
     }
 }
+
+.results {
+    @include Rajdhani();
+    margin-top: 2.5rem;
+}
+
