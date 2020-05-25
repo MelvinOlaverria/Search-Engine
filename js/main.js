@@ -1,12 +1,5 @@
-//Navbar Change on Scroll 
 
-window.addEventListener('scroll', function () {
-    let navbar = document.querySelector ('nav');
-    let windowPosition = window.scrollY > 0;
-    navbar.classList.toggle('scrolling-active', windowPosition);
-});
-
-
+//Fetch API Section
 // Selecting Dom Elements 
 
 const searchForm = document.querySelector('.search-form');
@@ -53,13 +46,21 @@ searchForm.onsubmit = function (e) {
         results.innerHTML = "Search results for" + " " + value;
 
         //Smooth Scroll to audio results
-        let scrollStop = document.querySelector('.results');
-        scrollStop.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        results.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     })
     .catch((err)=> {
         console.log(err);
     });
 };
+
+//Navbar Change on Scroll 
+
+window.addEventListener('scroll', function () {
+    let navbar = document.querySelector('nav');
+    let windowPosition = window.scrollY > 0;
+    navbar.classList.toggle('scrolling-active', windowPosition);
+});
+
 
 
 
