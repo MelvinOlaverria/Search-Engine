@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="https://kit.fontawesome.com/2737c530ca.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
         <title>Search Engine</title>
+        <a name="top"></a>
     </head>
     <body>
         <header>
             <nav class="navbar navbar-expand-md">
-                <a href="#" class="logo">Seek'da Sound</a>
-                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="my-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" >Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="#" id="logo">Seek'da Sound</a>
             </nav>
 
             <div class="CTA">
@@ -33,12 +23,13 @@
                     Find your favorite music within the iTunes library!
                 </p>
                 <form action="#" method="POST" class="search-form">
-                    <input type="text" class="search-input" placeholder="Type artist/album name">
+                    <input id="input-search" type="text" class="search-input" placeholder="Type artist/album name" required>
                     <div class="button">
                         <button class="search-button">Search</button>
                     </div>
                 </form>
             </div>
+            <a href="#top"><i class="fas fa-sort-up icon-up"></i></a>
         </header>
 
         <section class="container search-container">
@@ -48,7 +39,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="container footer">
             <h2>Have any questions or requests?</h2>
             <p>Feel free to reach out!</p>
             <ul>
