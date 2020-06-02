@@ -166,35 +166,45 @@ header {
             }
         }
     }
-
-    .fa-sort-up {
-        color: $primary-color;
-        font-size: 3em;
-        position: absolute;
-        position: fixed;
-        bottom: 0;
-        right: 30px;
-    }
 }
 
+.fa-sort-up {
+    color: $primary-color;
+    font-size: 3em;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+}
 
-.artist {
+.artist-container {
     display: flex;
-    justify-content: start;
-    margin: 20px;
-    padding-bottom: 20px;
-    height: 150px;
-    border-bottom: 1px solid $primary-color;
+    flex-direction: column;
 
-    img {
-        align-self: center;
-        justify-self: start;
-    }
+    .artist-block {
+        border-bottom: 1px solid $primary-color;
 
-    .artist-info {
-        margin-left: 20px;
+        .artist {
+            display: flex;
+            padding-top: 25px;
+    
+            .artist-info {
+                margin-left: 15px;
+            }
+        }
+    
+        .play {
+            margin-top: 15px;
+        }
     }
 }
+
+@media screen and (max-width:767px) {
+    artist-container {
+        @include column-center();
+    }
+}
+
 
 .results {
     @include Rajdhani();

@@ -1,4 +1,3 @@
-
 //Fetch API Section
 // Selecting Dom Elements 
 
@@ -21,17 +20,20 @@ searchForm.onsubmit = function (e) {
         let output = "";
         function searchResults(music) {
             output += ` 
-            <div class="col-md-6">
-                <div class="artist">
-                    <img src="${music.artworkUrl100}" alt="artist album/song image">
-                    <div class="artist-info">
-                        <h5>${music.artistName}</h5>
-                        <h5>${music.trackName}</h5>
-                        <div class="play">
+            <div class="artist-container container col-md-6">
+                <div class="artist-block">
+                    <div class="artist">
+                        <img src="${music.artworkUrl100}" alt="artist album/song image">
+                        <div class="artist-info">
+                            <h5>${music.artistName}</h5>
+                            <h5>${music.trackName}</h5>
+                        </div>
+                    </div>
+
+                    <div class="play">
                         <audio controls class="audio">
                             <source src="${music.previewUrl}" type="audio/mpeg">
                         </audio>
-                        </div>
                     </div>
                 </div>
             </div>
