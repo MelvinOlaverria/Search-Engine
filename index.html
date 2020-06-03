@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
         <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Search Engine</title>
         <a name="top"></a>
@@ -23,8 +23,8 @@
                 <p class="copy">
                     Find your favorite music within the iTunes library!
                 </p>
-                <form action="#" method="POST" class="search-form">
-                    <input id="input-search" type="text" class="search-input" placeholder="Type artist/song name" required>
+                <form action="#" method="GET" class="search-form">
+                    <input id="input-search" type="text" class="search-input" placeholder="Type artist/song name" required onkeyup="lettersOnly(this)">
                     <div class="button">
                         <button class="search-button">Search</button>
                     </div>
@@ -32,7 +32,7 @@
             </div>
         </header>
 
-        <section class="container search-container">
+        <section class="container search-container errorH">
             <h1 class="results" hidden>Search resuts for</h1>
             <div class="search-results row">
 
