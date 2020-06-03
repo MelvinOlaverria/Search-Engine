@@ -295,4 +295,10 @@ header .CTA .search-form .search-button:hover {
 .footer ul li {
   margin-bottom: 5px;
 }
+
+.error {
+  color: red;
+  margin-top: 40px;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
