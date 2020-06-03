@@ -5,17 +5,26 @@ const searchForm = document.querySelector('.search-form');
 const searchInput = document.querySelector('.search-input');
 const url = 'https://itunes.apple.com/search?term=';
 const resultsSearch = document.querySelector ('.search-results');
+const errH = document.querySelector ('.errorH');
 
 
 searchForm.onsubmit = function (e) {
     e.preventDefault();
     let value = searchInput.value;
     let newUrl = url + value
+    resultsSearch.innerHTML = '';
+    //error handling 
+
+function errorHandling() {
+    errH.innerHTML = `
+        <h3 class="error">Error loading data, make sure your network is on.</h>
+    `;
+    errH.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+}
 
     fetch(newUrl) 
     .then((res) => res.json())
     .then((data) => {
-        console.log(data);
         let music = data.results;
         let output = "";
         function searchResults(music) {
@@ -50,9 +59,7 @@ searchForm.onsubmit = function (e) {
         //Smooth Scroll to audio results
         results.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     })
-    .catch((err)=> {
-        console.log(err);
-    });
+    .catch(errorHandling);
 };
 
 //Navbar Change on Scroll 
@@ -64,6 +71,10 @@ window.addEventListener('scroll', function () {
 });
 
 
+//Regular Expressions & Restritions 
 
-
+function lettersOnly (input) {
+    var regex = /[^a-z,0-9,-, ]/gi;
+    input.value = input.value.replace(regex, "");
+};
 
