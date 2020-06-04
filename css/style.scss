@@ -182,10 +182,11 @@ header {
 
     .artist-block {
         border-bottom: 1px solid $primary-color;
+        padding: 20px 0;
 
         .artist {
             display: flex;
-            padding-top: 25px;
+            padding-top: 20px 0;
     
             .artist-info {
                 margin-left: 15px;

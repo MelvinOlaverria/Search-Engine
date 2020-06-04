@@ -216,13 +216,14 @@ header .CTA .search-form .search-button:hover {
 
 .artist-container .artist-block {
   border-bottom: 1px solid #deb992;
+  padding: 20px 0;
 }
 
 .artist-container .artist-block .artist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 25px;
+  padding-top: 20px 0;
 }
 
 .artist-container .artist-block .artist .artist-info {
