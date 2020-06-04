@@ -27,3 +27,8 @@ and dictate the behavior of the data received according to specific needs.
 1. Add limited search number functionality. 
 2. Add better styling to audio controls. 
 3. Fix scroll back up triangle (sometimes it doesn't work)
+
+## User Stories 
+
+1. As an artist, I would like to be able to preview the songs, so that I can get a better idea if I like it or not. 
+2. As a regular user I would like to be able to scroll back up to the search bar in one click, so that I can save time. 
