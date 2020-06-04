@@ -1,19 +1,14 @@
-//Fetch API Section
-// Selecting Dom Elements 
-
 const searchForm = document.querySelector('.search-form');
 const searchInput = document.querySelector('.search-input');
 const url = 'https://itunes.apple.com/search?term=';
 const resultsSearch = document.querySelector ('.search-results');
 const errH = document.querySelector ('.errorH');
 
-
 searchForm.onsubmit = function (e) {
     e.preventDefault();
     let value = searchInput.value;
     let newUrl = url + value
     resultsSearch.innerHTML = '';
-    //error handling 
 
 function errorHandling() {
     errH.innerHTML = `
@@ -51,18 +46,14 @@ function errorHandling() {
         music.forEach(searchResults);
         resultsSearch.innerHTML = output;
 
-        //Append search results text
         let results = document.querySelector('.results');
         results.removeAttribute("hidden");
         results.innerHTML = "Search results for" + " " + value;
 
-        //Smooth Scroll to audio results
         results.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     })
     .catch(errorHandling);
 };
-
-//Navbar Change on Scroll 
 
 window.addEventListener('scroll', function () {
     let navbar = document.querySelector('nav');
@@ -70,8 +61,6 @@ window.addEventListener('scroll', function () {
     navbar.classList.toggle('scrolling-active', windowPosition);
 });
 
-
-//Regular Expressions & Restritions 
 
 function lettersOnly (input) {
     var regex = /[^a-z,0-9,-, ]/gi;
