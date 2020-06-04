@@ -1,5 +1,7 @@
-Headers("Access-Control-Allow-Origin: *");
+Headers.set('Access-Control-Allow-Origin', 'https://itunes.apple.com/search?term=');
 
+
+header
 const searchForm = document.querySelector('.search-form');
 const searchInput = document.querySelector('.search-input');
 const url = 'https://itunes.apple.com/search?term=';

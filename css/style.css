@@ -19,6 +19,7 @@ header {
   background-position: center;
   height: 100vh;
   background-repeat: repeat-y;
+  background-attachment: fixed;
 }
 
 header .navbar {
