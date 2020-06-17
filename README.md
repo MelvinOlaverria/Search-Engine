@@ -7,6 +7,10 @@ This single page, responsive webpage uses the iTunes limited search API in order
 music by artist name, or song name. It displays both the artist name, song name, album/song 
 cover, as well as a 29 second preview of the song. 
 
+### Description 
+Project 
+[Hosted HERE](https://melvinolaverria.github.io/Search-Engine/)
+
 ## Functionality 
 
 Simple, just type in the artist or song name, scroll to find the song you're looking for, then click 
